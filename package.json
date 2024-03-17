@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/DeQ78/jHTExample/issues"
   },
-  "homepage": "https://github.com/DeQ78/jHTExample#readme"
+  "homepage": "https://github.com/DeQ78/jHTExample#readme",
+  "dependencies": {
+    "git": "file:github.com:DeQ78/jsHtmlTemplate.git"
+  }
 }
