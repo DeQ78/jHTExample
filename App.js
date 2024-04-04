@@ -2,28 +2,44 @@ import {JHTComponent} from './node_modules/jsHtmlTemplate/index.js'
 
 export class App extends JHTComponent {
     data = {
-        "msg": "aaaa",
-        "cntSw1": 0,
-        "cntSw2": 0
+        "msg": "Hello World",
+        "counter": {
+            "current": 0,
+            "increase": 0,
+            "decrease": 0
+        },
+        "msgCounter": "counter: current = %1; increase = %2; decrease = %3"
     }
 
     template = '' +
         '<div class="appContainer">' +
-        '<div>' +
-        '<button {@keydown="toggleSw1"}>toggle box1 = ${:cntSw1}</button>' +
-        '<button {@keydown="toggleSw2(2)"}>toggle box2 = ${:cntSw2}</button>' +
-        '<:baner cntSw1="{:cntSw1}" cntSw2="{:cntSw2}" msg="${msg}" />' +
-        '</div>' +
-        '<div class="box1">--- ${msg} ---</div>' +
-        '<div class="box1">box1 => ${:cntSw1}</div>' +
-        '<div class="box2">box2 => ${:cntSw2}</div>' +
+        '    <div class="msgBox">--- {$msg} ---</div>' +
+        '    <div class="msgBox">--- {revertMsg()} ---</div>' +
+        '    <:baner msg="{$msg}"/>' +
+        '    <div>' +
+        '        <button {@keydown="counterIncres()"}>incres(1)</button>' +
+        '        <button {@keydown="counterDecres(2)"}>decres(2)</button>' +
+
+        '        <div class="box">counter.increase = {$:counter.increase}</div>' +
+        '        <div class="box">counter.decrease = {$:counter.decrease}</div>' +
+        '        <:baner msg="{$msgCounter}" counter="{$:counter}" />' +
+        '        <div class="msgBox">--- {revertStr($:msgCounter)} ---</div>' +
+        '    </div>' +
         '</div>'
 
-    toggleSw1() {
+    counterIncres() {
         this.data.cntSw1++
     }
 
-    toggleSw2(counter) {
+    counterDecres(counter) {
         this.data.cntSw2 += counter
+    }
+
+    revertMsg() {
+        return this.revertStr(this.data.msg)
+    }
+
+    revertStr(str) {
+        return str.split("").reverse().join("")
     }
 }
