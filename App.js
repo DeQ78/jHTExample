@@ -19,22 +19,22 @@ export class App extends JHTComponent {
 
     template = '' +
         '<div class="appContainer">' +
-        '    <div>' +
-        '       <div class="msgBox">--- {$msg} ---</div>' +
-        '       <div class="msgBox">--- {revertMsg()} ---</div>' +
-        '    </div>' +
-        '    <span class="spacer"/>' +
-        '    <:baner msg="{$msg}"/>' +
-        '    <br/><br />'+
-        '    <div>' +
-        '        <button {@keydown="counterIncres()"}>incres(1)</button>' +
-        '        <button {@keydown="counterDecres(2)"}>decres(2)</button>' +
-        '        <div class="box">counter.increase = {$:counter.increase}</div>' +
-        '        <div class="box">counter.decrease = {$:counter.decrease}</div>' +
-        '        <:baner msgCounter="{$msgCounter}" counter="{$:counter}" />' +
-        '        <div class="msgBox">--- {revertStr($:msgCounter)} ---</div>' +
-        '    </div>' +
-        '</div>';
+        '    <div>'.trim() +
+        '       <div class="msgBox">--- {$msg} ---</div>'.trim() +
+        '       <div class="msgBox">--- {revertMsg()} ---</div>'.trim() +
+        '    </div>'.trim() +
+        '    <span class="spacer"/>'.trim() +
+        '    <:baner msg="{$msg}"/>'.trim() +
+        '    <br/><br />'.trim()+
+        '    <div>'.trim() +
+        '        <button {@keydown="counterIncres()"}>incres(1)</button>'.trim() +
+        '        <button {@keydown="counterDecres(2)"}>decres(2)</button>'.trim() +
+        '        <div class="box">counter.increase = {$:counter.increase}</div>'.trim() +
+        '        <div class="box">counter.decrease = {$:counter.decrease}</div>'.trim() +
+        '        <:baner msgCounter="{$msgCounter}" counter="{$:counter}" />'.trim() +
+        '        <div class="msgBox">--- {revertStr($:msgCounter)} ---</div>'.trim() +
+        '    </div>'.trim() +
+        '</div>'.trim();
 
     counterIncres() {
         this.data.cntSw1++
