@@ -6,7 +6,7 @@ window.addEventListener('load', function () {
             '#app',
             null,
         )
-        app.run()
+        app.initiate()
     } catch (error) {
         console.error(error)
     }

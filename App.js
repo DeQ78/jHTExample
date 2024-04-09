@@ -21,7 +21,7 @@ export class App extends JHTComponent {
         '<div class="appContainer">' +
         '    <div>'.trim() +
         '       <div class="msgBox">--- {$msg} ---</div>'.trim() +
-        '       <div class="msgBox">--- {revertMsg()} ---</div>'.trim() +
+        '       <div class="msgBox">--- <span>{revertMsg()}</span> ---</div>'.trim() +
         '    </div>'.trim() +
         '    <span class="spacer"/>'.trim() +
         '    <:baner msg="{$msg}"/>'.trim() +
