@@ -1,3 +1,4 @@
+"use strict";
 import {JHTComponent} from '/node_modules/jsHtmlTemplate/index.js'
 
 import {Baner} from './components/Baner.js'
