@@ -19,7 +19,7 @@ export class App extends JHTComponent {
     };
 
     template = '' +
-        '<div class="appContainer">' +
+        '<div class="appContainer mainContainer" myAttr="myAttrVal">' +
         '    <div>'.trim() +
         '       <div class="msgBox">--- {$msg} ---</div>'.trim() +
         '       <div class="msgBox">--- <span>{revertMsg()}</span> ---</div>'.trim() +
